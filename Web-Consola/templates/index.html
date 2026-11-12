@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificador Web de Aves</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f2f1;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 { color: #00796b; }
+        .video-box {
+            width: 100%;
+            margin-top: 15px;
+            border: 3px solid #00796b;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .video-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Plataforma Web - Explorador de Aves</h1>
+        <p>Interfaz responsive adaptable a cualquier dispositivo.</p>
+        <div class="video-box">
+            <img src="{{ url_for('video_feed') }}" alt="Transmisión en vivo">
+        </div>
+    </div>
+</body>
+</html>
